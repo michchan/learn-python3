@@ -14,7 +14,7 @@ def append_punctuation(phrase):
     else:
         return '{}.'.format(phrase)
  
-def make_conclusion(phrases):
+def make_sentence(phrases):
     sentences = []
     for phrase in phrases:
         if phrase.strip() == '' or is_end(phrase): continue
@@ -27,7 +27,7 @@ def main():
     while True:
         phrases.append(ask_to_say_something())
         if is_end(phrases[-1]): break
-    print(make_conclusion(phrases))
+    print(make_sentence(phrases))
 
 # Start app
 main()
