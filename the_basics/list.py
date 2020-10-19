@@ -1,4 +1,28 @@
+
+# Data type: list (mutable)
+marks_list = [45, 63, 87]
+print(marks_list, type(marks_list))
+
+# Create list with range
+ranged_list = list(range(1, 10, 2))
+print(ranged_list)
+
+# Calculate Average
+sum_mark = sum(marks_list)
+marks_length = len(marks_list)
+mean = sum_mark / marks_length
+print(sum_mark, mean)
+
+# Calculate Max
+max_mark = max(marks_list)
+print(max_mark)
+
+# Count a repeated item in a list
+student_grades = [9.1, 8.8, 10.0, 7.7, 6.8, 8.0, 10.0, 8.1, 10.0, 9.9]
+print(student_grades.count(10.0))
 monday_temps = [9.1, 8.8, 7.5]
+
+# ----------- List operations -----------
 
 # Append item
 monday_temps.append(12)
