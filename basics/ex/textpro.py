@@ -9,9 +9,10 @@ def is_end(phrase):
     return phrase.count('\end') > 0
 
 def append_punctuation(phrase):
-    punctuation = '.'
-    if phrase.startswith(interrogatives): punctuation = '?'
-    return f'{phrase}{punctuation}'
+    if phrase.startswith(interrogatives): 
+        return '{}?'.format(phrase)
+    else:
+        return '{}.'.format(phrase)
  
 def make_conclusion(phrases):
     sentences = []
