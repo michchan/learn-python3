@@ -15,7 +15,11 @@ z = 10.1 # type: float
 sum1 = x + x
 sum2 = y + y
 print(sum1, sum2)
+
+# type()
 print(type(x), type(y), type(z))
+# isinstance()
+print(isinstance(x, dict))
 
 # Convert to lowercase
 username = 'Python3'
