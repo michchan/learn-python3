@@ -2,6 +2,7 @@
 # - Cannot start with a number
 # - Cannot start with an operator
 
+
 # Defintion of a mean function
 def mean(list):
     result = sum(list) / len(list)
@@ -15,3 +16,9 @@ print(mean_result)
 print(type(mean), type(sum))
 
 
+# Without return (void)
+def voidFunc():
+    return None 
+# or return print()
+def printFunc():
+    print('No return statement')
