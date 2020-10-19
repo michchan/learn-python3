@@ -1,4 +1,4 @@
-question_words = ('What', 'How', 'When', 'Which', 'Shall', 'Should', 'Would', 'Could', 'Can', 'Do', 'Does', 'Is')
+interrogatives = ('What', 'How', 'When', 'Which', 'Shall', 'Should', 'Would', 'Could', 'Can', 'Do', 'Does', 'Is')
 phrases = []
 
 def ask_to_say_something():
@@ -10,7 +10,7 @@ def is_end(phrase):
 
 def append_punctuation(phrase):
     punctuation = '.'
-    if phrase.startswith(question_words): punctuation = '?'
+    if phrase.startswith(interrogatives): punctuation = '?'
     return f'{phrase}{punctuation}'
  
 def make_conclusion(phrases):
