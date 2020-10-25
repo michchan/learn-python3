@@ -1,7 +1,7 @@
 # -------------- Open and read a file --------------
 
 # Open a file object
-myfile = open('fruits.txt')
+myfile = open('assets/fruits.txt')
 # Read the file as string.
 # Before the read() invoked, the cursor is at the start of the file object.
 content = myfile.read()
@@ -17,7 +17,7 @@ myfile.close()
 # Open the file with the "with" context manager.
 # It will be more organized and safer to do any file object operation,
 # as everything has to be done within the scope/block after the "with" statement.
-with open('fruits.txt') as myfile:
+with open('assets/fruits.txt') as myfile:
     content = myfile.read()
     
 # This statement is out of the scope of the above "with" context
@@ -26,7 +26,7 @@ print(content)
 # -------------- mode of read/write --------------
 
 # Read mode: r
-with open('fruits.txt', 'r') as myfile:
+with open('assets/fruits.txt', 'r') as myfile:
     content = myfile.read()
 
 # See help(open) for different modes!
@@ -34,16 +34,16 @@ with open('fruits.txt', 'r') as myfile:
 # Write/replace content to a file:
 # Write mode: w
 # It "create one if the file doesn't exists"
-with open('vegetables.txt', 'w') as myfile:
+with open('assets/vegetables.txt', 'w') as myfile:
     num_chars_written = myfile.write('Tomato\nCucumber\nOnion')
     print(num_chars_written)
 
 # Append: a
-with open('vegetables.txt', 'a') as myfile:
+with open('assets/vegetables.txt', 'a') as myfile:
     myfile.write('\nOkra')
 
 # Append and read: a+
-with open('vegetables.txt', 'a+') as myfile:
+with open('assets/vegetables.txt', 'a+') as myfile:
     myfile.write('\nOkra')
     # Move the cursor to the start
     myfile.seek(0)
@@ -53,5 +53,5 @@ with open('vegetables.txt', 'a+') as myfile:
 # Create, or throw an error if the file exists: x
 # It should throw something like: 
 # FileExistsError: [Errno 17] File exists: 'vegetables.txt'
-with open('vegetables.txt', 'x') as myfile:
+with open('assets/vegetables.txt', 'x') as myfile:
     myfile.write('\nOkra')
