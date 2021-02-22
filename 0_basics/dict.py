@@ -1,5 +1,5 @@
 # Dictionary types
-student_grades = { 'mary': 30, 'Sim': 60, 'John': 12 }
+student_grades = { 'Marry': 30, 'Sim': 60, 'John': 12 }
 test_num_as_key = { 123: 1321 }
 print(student_grades, test_num_as_key)
 
