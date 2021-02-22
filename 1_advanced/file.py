@@ -1,3 +1,7 @@
+# -------------- Get dirname --------------
+import os
+print(os.path.dirname(__file__))
+
 # -------------- Open and read a file --------------
 
 # Open a file object
