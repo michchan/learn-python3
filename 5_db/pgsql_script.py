@@ -1,6 +1,6 @@
-import sqlite3
+import psycopg2
 
-conn = sqlite3.connect('lite.db')
+conn = psycopg2.connect("dbname='database1'")
 cur = conn.cursor()
 
 def create_table():
