@@ -7,7 +7,7 @@ def create_table():
     cur.execute("CREATE TABLE IF NOT EXISTS store (item TEXT, quantity INTEGER, price REAL)")
 
 def insert(item, quantity, price):
-    cur.execute("INSERT INTO store VALUES (?, ?, ?)", (item, quantity, price))
+    cur.execute("INSERT INTO store VALUES (?, ?, ?)" % (item, quantity, price))
 
 def view():
     cur.execute('SELECT * FROM store')
