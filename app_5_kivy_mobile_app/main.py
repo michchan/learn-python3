@@ -1,6 +1,9 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
+from hoverable import HoverBehavior
+from kivy.uix.image import Image
+from kivy.uix.behaviors import ButtonBehavior
 import json, glob, random
 from datetime import datetime
 from pathlib import Path
@@ -35,6 +38,9 @@ class LoginScreen(Screen):
             self.ids.login_wrong.text = "Wrong username or password"
 
 class SignUpScreen(Screen):
+    def go_back(self):
+        _navigate(self.manager, 'login_screen', direction='right')
+
     def add_user(self, username, password):
         users = _get_users()
         users[username] = {
@@ -69,6 +75,10 @@ class LoginSuccessScreen(Screen):
             self._display_quote(random.choice(quotes))
         else:
             self._display_quote("Try another feeling")
+
+# ButtonBehavior must be the first one in order for "on_press" to work
+class ImageButton(ButtonBehavior, HoverBehavior, Image):
+    pass
 
 # --------------------- Root ---------------------
 class RootWidget(ScreenManager):
