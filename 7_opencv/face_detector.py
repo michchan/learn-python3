@@ -1,5 +1,6 @@
 import cv2
 
+# * Remember to include the xml file under the same directory!
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 img = cv2.imread("photo.jpg")
